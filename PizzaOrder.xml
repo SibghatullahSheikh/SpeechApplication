@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<grammar version="1.0" xml:lang="en-US"
+         xmlns="http://www.w3.org/2001/06/grammar"
+         tag-format="semantics/1.0" root="Main">
+  
+  <!-- cities.xml: 
+    Defines an SRGS grammar for requesting a flight. This grammar includes
+    a Cities rule that lists the cities that can be used for departures
+    and destinations. -->
+  
+  <rule id="Main">
+	 <item>
+	 I would like to order <ruleref uri="#Size"/>
+	 size pizza with
+	 </item>
+	 <item repeat="0-3" repeat-prob=".7">
+	 <ruleref uri="#Toppings"/> 
+	 </item>
+	 <item> confirm </item>
+  </rule>
+
+  <rule id="Greeting" scope="public">
+    <one-of>
+      <item> Hi </item>
+      <item> Hello </item>
+      <item>  </item>
+    </one-of>
+  </rule>
+
+  <rule id="Want" scope="public">
+    <one-of>
+      <item> I would like to order </item>
+      <item> I want </item>
+      <item> Give me </item>
+      <item> I will take </item>
+    </one-of>
+  </rule>
+  
+  <rule id="Size" scope="public">
+    <one-of>
+      <item> Small </item>
+      <item> Medium </item>
+      <item> Large </item>
+      <item> Extra Large </item>
+    </one-of>
+  </rule>
+
+   <rule id="Toppings" scope="public">
+    <one-of>
+      <item> Cheese </item>
+      <item> Pepperoni </item>
+      <item> Sausage </item>
+      <item> Peppers </item>
+      <item> Sauce </item>
+      <item> Onions </item>
+      <item> Ham </item>
+      <item> Pineapple </item>
+      <item> Mushrooms </item>
+      <item> Tomatoes </item>
+      <item> Olives </item>
+    </one-of>
+  </rule>
+  
+  
+
+  
+
+  
+</grammar>

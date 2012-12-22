@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<grammar version="1.0" xml:lang="en-US"
+         xmlns="http://www.w3.org/2001/06/grammar"
+         tag-format="semantics/1.0" root="Main">
+  
+  <!-- cities.xml: 
+    Defines an SRGS grammar for requesting a flight. This grammar includes
+    a Cities rule that lists the cities that can be used for departures
+    and destinations. -->
+  
+  <rule id="Main">
+	<one-of>
+		<item><ruleref uri="#opt1"/></item>
+		<item><ruleref uri="#Confirm"/></item>
+		<item><ruleref uri="#opt2"/></item>
+		<item><ruleref uri="#opt3"/></item>
+	</one-of>
+  </rule>
+  
+  <rule id="opt1" scope="public">
+	<item repeat="0-1">
+		<ruleref uri="#Greeting"/>
+	 </item>
+	 <item>
+		<ruleref uri="#Want"/> a 
+	 </item>
+	 <item repeat="0-1">
+		<ruleref uri="#Size"/>
+	 </item>
+	 <item>
+		<ruleref uri="#ToppingOpts"/>
+	 </item>
+  </rule>
+  
+  <rule id="opt2" scope="public">
+	<item repeat="0-1">
+		<ruleref uri="#Want"/> a
+	</item>
+	<item>
+		<ruleref uri="#Size"/>
+	</item>
+  </rule>
+  
+  <rule id="opt3" scope="public">
+	<item repeat="0-1">
+		<ruleref uri="#Want"/>
+	</item>
+	<item repeat="0-1">
+		a pizza with
+	</item>
+	<item>
+		<ruleref uri="#Toppings"/> please
+	</item>
+  </rule>
+  
+  <rule id="ToppingOpts" scope="public">
+	<one-of>
+		<item>
+			<ruleref uri="#ToppingOpt1"/>
+		</item>
+		<item>
+			<ruleref uri="#ToppingOpt2"/>
+		</item>
+		<item>
+			<ruleref uri="#NoTopping"/>
+		</item>
+	</one-of>
+  </rule>
+  
+  <rule id="ToppingOpt1" scope="public">
+	<item>
+		<ruleref uri="#Toppings"/> pizza
+	</item>
+  </rule>
+  
+  <rule id="ToppingOpt2" scope="public">
+	<item>
+		pizza with <ruleref uri="#Toppings"/> please
+	</item>
+  </rule>
+  
+  <rule id="NoTopping" scope="public">
+	<item> pizza please </item>
+  </rule>
+	
+  <rule id="Greeting" scope="public">
+    <one-of>
+      <item> hi </item>
+      <item> hello </item>
+	  <item> hey </item>
+    </one-of>
+  </rule>
+
+  <rule id="Want" scope="public">
+    <one-of>
+      <item> i would like to order </item>
+	  <item> i would like </item>
+	  <item> i want to order </item>
+      <item> i want </item>
+      <item> give me </item>
+      <item> i will take </item>
+    </one-of>
+  </rule>
+  
+  <rule id="Size" scope="public">
+    <one-of>
+      <item> Small </item>
+      <item> Medium </item>
+      <item> Large </item>
+    </one-of>
+  </rule>
+  
+  <rule id="Toppings" scope="public">
+	<item repeat="1-10">
+		<ruleref uri="#Topping"/>
+	</item>
+	<item repeat="0-1">
+		and <ruleref uri="#Topping"/>
+	</item>
+  </rule>  
+
+   <rule id="Topping" scope="public">
+    <one-of>
+      <item> Cheese </item>
+      <item> Pepperoni </item>
+      <item> Sausage </item>
+      <item> Peppers </item>
+      <item> Sauce </item>
+      <item> Onions </item>
+      <item> Ham </item>
+      <item> Pineapple </item>
+      <item> Mushrooms </item>
+      <item> Tomatoes </item>
+      <item> Olives </item>
+	  <item> Anchovies </item>
+	  <item> Bacon </item>
+	  <item> Chicken </item>
+	  <item> Spinach </item>
+	  <item> Broccoli </item>
+    </one-of>
+  </rule>
+  
+  <rule id="Confirm" scope="public">
+	<one-of>
+		<item> Yes </item>
+		<item> No </item>
+		<item> Nope </item>
+		<item> Yeah </item>
+	</one-of>
+  </rule>
+</grammar>

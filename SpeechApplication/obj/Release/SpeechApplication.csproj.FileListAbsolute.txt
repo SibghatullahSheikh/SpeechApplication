@@ -1,0 +1,8 @@
+C:\Users\suraesh\Documents\Visual Studio 2008\Projects\SpeechApplication\SpeechApplication\bin\Release\SpeechApplication.exe
+C:\Users\suraesh\Documents\Visual Studio 2008\Projects\SpeechApplication\SpeechApplication\bin\Release\SpeechApplication.pdb
+C:\Users\suraesh\Documents\Visual Studio 2008\Projects\SpeechApplication\SpeechApplication\bin\Release\Interop.SpeechLib.dll
+C:\Users\suraesh\Documents\Visual Studio 2008\Projects\SpeechApplication\SpeechApplication\obj\Release\ResolveAssemblyReference.cache
+C:\Users\suraesh\Documents\Visual Studio 2008\Projects\SpeechApplication\SpeechApplication\obj\Release\Interop.SpeechLib.dll
+C:\Users\suraesh\Documents\Visual Studio 2008\Projects\SpeechApplication\SpeechApplication\obj\Release\SpeechApplication.csproj.ResolveComReference.cache
+C:\Users\suraesh\Documents\Visual Studio 2008\Projects\SpeechApplication\SpeechApplication\obj\Release\SpeechApplication.exe
+C:\Users\suraesh\Documents\Visual Studio 2008\Projects\SpeechApplication\SpeechApplication\obj\Release\SpeechApplication.pdb
